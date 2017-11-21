@@ -8,10 +8,12 @@ RUN zypper ref && zypper -n in \
     python3-neovim \
     man \
     git \
-    curl
+    curl \
+    zsh \
+    python-virtualenvwrapper
 WORKDIR /root
 RUN git clone https://github.com/fneu/dotfiles.git
 WORKDIR /root/dotfiles
 RUN bash install
 WORKDIR /
-CMD bash
+CMD zsh
