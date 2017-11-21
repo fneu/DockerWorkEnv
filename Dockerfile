@@ -1,7 +1,6 @@
 FROM opensuse:tumbleweed
 
-RUN zypper ref && zypper -n dup
-RUN zypper -n in \
+RUN zypper ref && zypper -n in \
     python3 \
     python3-pip \
     python3-jupyter_ipython \
